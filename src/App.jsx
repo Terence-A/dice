@@ -1,9 +1,14 @@
 import "./App.css";
+import DiceBoard from "./components/DiceBoard";
+import Header from "./components/Header";
+import RollOptions from "./components/RollOptions";
 
 function App() {
   return (
-    <main>
-      <h1>Dice</h1>
+    <main className="h-screen bg-stone-300">
+      <Header />
+      <DiceBoard />
+      <RollOptions />
     </main>
   );
 }
