@@ -1,5 +1,3 @@
-import React from "react";
-
 const Header = () => {
   return (
     <section className="bg-stone-950 flex justify-between items-center px-10 py-4 shadow-md shadow-stone-600 ">
