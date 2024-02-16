@@ -29,7 +29,7 @@ const DiceBoard = () => {
 
   return (
     <div>
-      <section className="flex justify-center mt-28 bg-green-700 w-[500px] px-6 pb-6 pt-28  m-auto rounded-2xl border-4 border-stone-950 shadow-lg shadow-stone-900">
+      <section className="flex justify-center mt-9 bg-green-700 w-[500px] px-6 pb-6 pt-28  rounded-2xl border-4 border-stone-950 shadow-lg shadow-stone-900 ">
         <button
           onClick={() => handleKeepDieOne(diceRolled.firstDie + 1, "firstDie")}
         >
