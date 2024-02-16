@@ -8,7 +8,6 @@ function App() {
     <main className="h-screen bg-stone-300">
       <Header />
       <DiceBoard />
-      <RollOptions />
     </main>
   );
 }
