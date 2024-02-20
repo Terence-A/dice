@@ -6,7 +6,7 @@ const ResultModal = forwardRef(function ResultModal({ setShowRules }, ref) {
   };
   return (
     <dialog
-      className="mt-48 w-96 shadow-lg shadow-stone-600 rounded-lg p-4 text-xs"
+      className="mt-48 w-96 shadow-lg shadow-stone-600 rounded-lg p-4 text-xs backdrop:bg-stone-900/90"
       ref={ref}
     >
       <h2 className="font-bold mb-2 text-lg">Rules</h2>
