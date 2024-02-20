@@ -1,4 +1,4 @@
-const RollOptions = ({ setDiceRolled, diceKept }) => {
+const RollOptions = ({ setDiceRolled, setDiceKept }) => {
   const handleRollClick = () => {
     setDiceRolled({
       firstDie: Math.floor(Math.random() * 5),
@@ -6,6 +6,14 @@ const RollOptions = ({ setDiceRolled, diceKept }) => {
       thirdDie: Math.floor(Math.random() * 5),
       forthDie: Math.floor(Math.random() * 5),
       fifthDie: Math.floor(Math.random() * 5),
+    });
+
+    setDiceKept({
+      keepOne: false,
+      keepTwo: false,
+      keepThree: false,
+      keepFour: false,
+      keepFive: false,
     });
   };
 
