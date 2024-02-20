@@ -12,7 +12,7 @@ const ScoreCombosDialog = forwardRef(function ScoreCombosDialog(
   return (
     <dialog
       ref={ref}
-      className="mt-48 w-96 shadow-lg shadow-stone-600 rounded-lg p-4 text-xs"
+      className="mt-48 w-96 shadow-lg shadow-stone-600 rounded-lg p-4 text-xs backdrop:bg-stone-900/90"
     >
       <h2 className="font-bold mb-6 text-lg">Scoring Combos</h2>
 
