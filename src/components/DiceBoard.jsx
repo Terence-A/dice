@@ -2,7 +2,7 @@ import diceData from "../diceData";
 import { useState } from "react";
 import RollOptions from "./RollOptions";
 
-const DiceBoard = () => {
+const DiceBoard = ({ setTurns, turns, currentScore, setCurrentScore }) => {
   const [diceKept, setDiceKept] = useState({
     keepOne: false,
     keepTwo: false,
@@ -11,32 +11,29 @@ const DiceBoard = () => {
     keepFive: false,
   });
 
-  let diceOneClass =
-    "w-16 h-16 mx-2 shadow-md hover:shadow-stone-800 rounded-lg  ";
+  let cssClass = "w-16 h-16 mx-2 shadow-md hover:shadow-stone-800 rounded-lg";
+
+  let diceOneClass = cssClass;
   if (diceKept.keepOne === true) {
     diceOneClass += " -translate-y-24";
   }
 
-  let diceTwoClass =
-    "w-16 h-16 mx-2 shadow-md hover:shadow-stone-800 rounded-lg  ";
+  let diceTwoClass = cssClass;
   if (diceKept.keepTwo === true) {
     diceTwoClass += " -translate-y-24";
   }
 
-  let diceThreeClass =
-    "w-16 h-16 mx-2 shadow-md hover:shadow-stone-800 rounded-lg  ";
+  let diceThreeClass = cssClass;
   if (diceKept.keepThree === true) {
     diceThreeClass += " -translate-y-24";
   }
 
-  let diceFourClass =
-    "w-16 h-16 mx-2 shadow-md hover:shadow-stone-800 rounded-lg  ";
+  let diceFourClass = cssClass;
   if (diceKept.keepFour === true) {
     diceFourClass += " -translate-y-24";
   }
 
-  let diceFiveClass =
-    "w-16 h-16 mx-2 shadow-md hover:shadow-stone-800 rounded-lg  ";
+  let diceFiveClass = cssClass;
   if (diceKept.keepFive === true) {
     diceFiveClass += " -translate-y-24";
   }
@@ -144,7 +141,14 @@ const DiceBoard = () => {
           />
         </button>
       </section>
-      <RollOptions setDiceRolled={setDiceRolled} setDiceKept={setDiceKept} />
+      <RollOptions
+        setDiceRolled={setDiceRolled}
+        setDiceKept={setDiceKept}
+        setTurns={setTurns}
+        turns={turns}
+        currentScore={currentScore}
+        setCurrentScore={setCurrentScore}
+      />
     </div>
   );
 };

@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import "./App.css";
 import CurrentScore from "./components/CurrentScore";
 import DiceBoard from "./components/DiceBoard";
@@ -5,6 +7,10 @@ import Header from "./components/Header";
 import HighScores from "./components/HighScores";
 
 function App() {
+  const [currentScore, setCurrentScore] = useState(0);
+  const [turns, setTurns] = useState(0);
+  const [totalScore, setTotalScore] = useState(0);
+
   return (
     <main className="h-screen bg-stone-300">
       <Header />
@@ -13,8 +19,17 @@ function App() {
       </h1>
       <div className="flex justify-between items-center mx-32">
         <HighScores />
-        <DiceBoard />
-        <CurrentScore />
+        <DiceBoard
+          setTurns={setTurns}
+          turns={turns}
+          currentScore={currentScore}
+          setCurrentScore={setCurrentScore}
+        />
+        <CurrentScore
+          turns={turns}
+          currentScore={currentScore}
+          totalScore={totalScore}
+        />
       </div>
     </main>
   );
