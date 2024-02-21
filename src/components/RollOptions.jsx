@@ -1,4 +1,11 @@
-const RollOptions = ({ setDiceRolled, setDiceKept }) => {
+const RollOptions = ({
+  setDiceRolled,
+  setDiceKept,
+  setTurns,
+  turns,
+  currentScore,
+  setCurrentScore,
+}) => {
   const handleRollClick = () => {
     setDiceRolled({
       firstDie: Math.floor(Math.random() * 5),
@@ -15,6 +22,10 @@ const RollOptions = ({ setDiceRolled, setDiceKept }) => {
       keepFour: false,
       keepFive: false,
     });
+  };
+
+  const handleTakeScore = () => {
+    setTurns(turns + 1);
   };
 
   return (
@@ -48,7 +59,10 @@ const RollOptions = ({ setDiceRolled, setDiceKept }) => {
           Roll
         </button>
 
-        <button className="text-3xl w-48  text-stone-50 bg-red-900 hover:bg-red-700 border-4 border-stone-900 font-bold px-8 py-4 rounded-xl shadow-md hover:shadow-lg hover:shadow-stone-900 shadow-stone-900">
+        <button
+          className="text-3xl w-48  text-stone-50 bg-red-900 hover:bg-red-700 border-4 border-stone-900 font-bold px-8 py-4 rounded-xl shadow-md hover:shadow-lg hover:shadow-stone-900 shadow-stone-900"
+          onClick={handleTakeScore}
+        >
           Take It
         </button>
       </div>
